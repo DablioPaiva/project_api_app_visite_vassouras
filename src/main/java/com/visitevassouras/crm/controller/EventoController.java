@@ -1,9 +1,9 @@
 package com.visitevassouras.crm.controller;
 
-import com.visitevassouras.crm.exceptions.ResourceNotFoundException;
-import com.visitevassouras.crm.model.Evento;
-import com.visitevassouras.crm.repository.EventoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.visitevassouras.crm.dto.evento.EventoCreatedRequest;
+import com.visitevassouras.crm.dto.evento.EventoResponse;
+import com.visitevassouras.crm.dto.evento.EventoUpdateRequest;
+import com.visitevassouras.crm.service.EventoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.visitevassouras.crm.model;
+package com.visitevassouras.crm.entity;
 
 import lombok.Data;
 
@@ -12,13 +12,12 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
     private String tituloEvento;
     private String enderecoEvento;
     private String descricaoEvento;
-    private Date diasInicio;
-    private Date diasTermino;
+    private String diasInicio;
+    private String diasTermino;
     private String horarioEvento;
     private Float valor;
     private String linkIngresso;
