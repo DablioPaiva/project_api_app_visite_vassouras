@@ -6,10 +6,12 @@ import com.visitevassouras.crm.dto.evento.EventoResponse;
 import com.visitevassouras.crm.dto.evento.EventoUpdateRequest;
 import com.visitevassouras.crm.exception.ResourceNotFoundException;
 import com.visitevassouras.crm.repository.EventoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class EventoService {
     private final EventoRepository repository;
 

@@ -83,5 +83,4 @@ public class RestauranteService {
                 restaurante.getUrlRestaurante()
         );
     }
-
 }

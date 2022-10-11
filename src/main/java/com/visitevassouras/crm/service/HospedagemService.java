@@ -54,6 +54,7 @@ public class HospedagemService {
         var hospedagem = result.get();
         hospedagem.setNomeHospedagem(request.getNomeHospedagem());
         hospedagem.setUrlHospedagem(request.getUrlHospedagem());
+        hospedagem.setImagemHospedagem(request.getImagemHospedagem());
 
         var saveHospedagem = repository.save(hospedagem);
 
