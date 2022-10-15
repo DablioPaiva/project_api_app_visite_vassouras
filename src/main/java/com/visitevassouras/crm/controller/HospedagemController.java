@@ -26,14 +26,14 @@ public class HospedagemController {
         var result = service.listAll();
         return ResponseEntity.ok(result);
     }
-    @PostMapping("/hospedagens")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity <HospedagemResponse> create(@RequestBody @Valid HospedagemCreatedRequest request) {
         var result = service.createHospedagem(request);
         return ResponseEntity.ok(result);
     }
 
-    @PatchMapping("/hospedagens/{id}")
+    @PatchMapping("/edit/{id}")
     public ResponseEntity<HospedagemResponse> update(
             @PathVariable("id") Long id,
             @RequestBody @Valid HospedagemUpdateRequest updateRequest) {
@@ -41,7 +41,7 @@ public class HospedagemController {
         return ResponseEntity.ok(hospedagem);
     }
 
-    @DeleteMapping("/hospedagens/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<HospedagemResponse> delete(@PathVariable("id") Long id) {
         var hospedagem = service.delete(id);
         return ResponseEntity.ok(hospedagem);

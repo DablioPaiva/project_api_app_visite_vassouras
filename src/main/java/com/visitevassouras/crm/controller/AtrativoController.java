@@ -27,14 +27,14 @@ public class AtrativoController {
         return ResponseEntity.ok(result);
     }
 
-    @PostMapping("/atrativos")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity <AtrativoResponse> create(@RequestBody @Valid AtrativoCreatedRequest request) {
         var result = service.createAtrativo(request);
         return ResponseEntity.ok(result);
     }
 
-    @PatchMapping("/atrativos/{id}")
+    @PatchMapping("/edit/{id}")
     public ResponseEntity<AtrativoResponse> update(
             @PathVariable("id") Long id,
             @RequestBody @Valid AtrativoUpdateRequest updateRequest) {
@@ -42,7 +42,7 @@ public class AtrativoController {
         return ResponseEntity.ok(atrativo);
     }
 
-    @DeleteMapping("/atrativos/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<AtrativoResponse> delete(@PathVariable("id") Long id) {
         var atrativo = service.delete(id);
         return ResponseEntity.ok(atrativo);

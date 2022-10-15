@@ -28,14 +28,14 @@ public class EventoController {
         return ResponseEntity.ok(result);
     }
 
-    @PostMapping("/eventos")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity <EventoResponse> create(@RequestBody @Valid EventoCreatedRequest request) {
         var result = service.createEvento(request);
         return ResponseEntity.ok(result);
     }
 
-    @PatchMapping("/eventos/{id}")
+    @PatchMapping("/edit/{id}")
     public ResponseEntity<EventoResponse> update(
             @PathVariable("id") Long id,
             @RequestBody @Valid EventoUpdateRequest updateRequest) {
@@ -43,7 +43,7 @@ public class EventoController {
         return ResponseEntity.ok(evento);
     }
 
-    @DeleteMapping("/evento/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<EventoResponse> delete(@PathVariable("id") Long id) {
         var evento = service.delete(id);
         return ResponseEntity.ok(evento);

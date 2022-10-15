@@ -27,14 +27,14 @@ public class RestauranteController {
         var result = service.listAll();
         return ResponseEntity.ok(result);
     }
-    @PostMapping("/restaurantes")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity <RestauranteResponse> create(@RequestBody @Valid RestauranteCreatedRequest request) {
         var result = service.createRestaurante(request);
         return ResponseEntity.ok(result);
     }
 
-    @PatchMapping("/restaurantes/{id}")
+    @PatchMapping("/edit/{id}")
     public ResponseEntity<RestauranteResponse> update(
             @PathVariable("id") Long id,
             @RequestBody @Valid RestauranteUpdateRequest updateRequest) {
@@ -42,7 +42,7 @@ public class RestauranteController {
         return ResponseEntity.ok(restaurante);
     }
 
-    @DeleteMapping("/restaurantes/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<RestauranteResponse> delete(@PathVariable("id") Long id) {
         var restaurante = service.delete(id);
         return ResponseEntity.ok(restaurante);
