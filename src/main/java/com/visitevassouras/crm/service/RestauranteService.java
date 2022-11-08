@@ -24,24 +24,24 @@ public class RestauranteService {
 
         return result.stream().map(restaurante -> new RestauranteResponse(
                 restaurante.getId(),
-                restaurante.getNomeRestaurante(),
-                restaurante.getLogoRestaurante(),
-                restaurante.getUrlRestaurante()
+                restaurante.getNome(),
+                restaurante.getLogo(),
+                restaurante.getUrl()
         )).collect(Collectors.toList());
     }
     public RestauranteResponse createRestaurante(RestauranteCreatedRequest request) {
         var newRestaurante = new Restaurantes();
-        newRestaurante.setNomeRestaurante(request.getNomeRestaurante());
-        newRestaurante.setLogoRestaurante(request.getLogoRestaurante());
-        newRestaurante.setUrlRestaurante(request.getUrlRestaurante());
+        newRestaurante.setNome(request.getNome());
+        newRestaurante.setLogo(request.getLogo());
+        newRestaurante.setUrl(request.getUrl());
 
         var saveRestaurante = repository.save(newRestaurante);
 
         return new RestauranteResponse(
                 saveRestaurante.getId(),
-                saveRestaurante.getNomeRestaurante(),
-                saveRestaurante.getLogoRestaurante(),
-                saveRestaurante.getUrlRestaurante()
+                saveRestaurante.getNome(),
+                saveRestaurante.getLogo(),
+                saveRestaurante.getUrl()
         );
     }
 
@@ -53,16 +53,16 @@ public class RestauranteService {
         }
 
         var restaurante = result.get();
-        restaurante.setNomeRestaurante(request.getNomeRestaurante());
-        restaurante.setLogoRestaurante(request.getLogoRestaurante());
-        restaurante.setUrlRestaurante(request.getUrlRestaurante());
+        restaurante.setNome(request.getNome());
+        restaurante.setLogo(request.getLogo());
+        restaurante.setUrl(request.getUrl());
         var saveRestaurante = repository.save(restaurante);
 
         return new RestauranteResponse(
                 saveRestaurante.getId(),
-                saveRestaurante.getNomeRestaurante(),
-                saveRestaurante.getLogoRestaurante(),
-                saveRestaurante.getUrlRestaurante()
+                saveRestaurante.getNome(),
+                saveRestaurante.getLogo(),
+                saveRestaurante.getUrl()
         );
     }
 
@@ -78,9 +78,9 @@ public class RestauranteService {
 
         return new RestauranteResponse(
                 restaurante.getId(),
-                restaurante.getNomeRestaurante(),
-                restaurante.getLogoRestaurante(),
-                restaurante.getUrlRestaurante()
+                restaurante.getNome(),
+                restaurante.getLogo(),
+                restaurante.getUrl()
         );
     }
 }

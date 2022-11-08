@@ -8,12 +8,12 @@ import javax.validation.constraints.NotEmpty;
 public class RestauranteCreatedRequest {
 
     @NotEmpty(message = "Por favor, informe o nome do restaurante.")
-    private String nomeRestaurante;
+    private String nome;
 
     @NotEmpty(message = "Por favor, faça upload de uma imagem para a logo do restaurante.")
-    private String logoRestaurante;
+    private String logo;
 
     @NotEmpty(message = "Por favor, informe uma url para o restaurante.")
-    private String urlRestaurante;
+    private String url;
 
 }

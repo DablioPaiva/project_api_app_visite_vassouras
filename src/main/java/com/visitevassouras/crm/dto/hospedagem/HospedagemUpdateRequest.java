@@ -7,12 +7,12 @@ import javax.validation.constraints.NotEmpty;
 public class HospedagemUpdateRequest {
 
     @NotEmpty(message = "Por favor, informe o nome do estabeleciomento de hospedagem")
-    private String nomeHospedagem;
+    private String nome;
 
     @NotEmpty(message = "Por favor, informe a url da imagem")
-    private String imagemHospedagem;
+    private String imagem;
 
     @NotEmpty(message = "Por favor, informe a url do estabelecimento de hospedagem")
-    private String urlHospedagem;
+    private String url;
 
 }

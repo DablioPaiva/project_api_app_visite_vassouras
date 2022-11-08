@@ -8,13 +8,13 @@ import javax.validation.constraints.NotEmpty;
 public class AtrativoCreatedRequest {
 
     @NotEmpty(message = "Por favor, informe o nome do Atrativo.")
-    private String nomeAtrativo;
+    private String nome;
 
     @NotEmpty(message = "Por favor, informe o endereço do Atrativo.")
-    private String enderecoAtrativo;
+    private String endereco;
 
     @NotEmpty(message = "Por favor, informe uma descrição para o Atrativo.")
-    private String descricaoAtrativo;
+    private String descricao;
 
     @NotEmpty(message = "Por favor, informe os dias de funcionamento do Atrativo.")
     private String diasFuncionamento;

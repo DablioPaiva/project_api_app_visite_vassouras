@@ -25,9 +25,9 @@ public class AtrativoService {
 
         return result.stream().map(atrativo -> new AtrativoResponse(
                 atrativo.getId(),
-                atrativo.getNomeAtrativo(),
-                atrativo.getEnderecoAtrativo(),
-                atrativo.getDescricaoAtrativo(),
+                atrativo.getNome(),
+                atrativo.getEndereco(),
+                atrativo.getDescricao(),
                 atrativo.getDiasFuncionamento(),
                 atrativo.getHorarioFuncionamento(),
                 atrativo.getRota(),
@@ -38,9 +38,9 @@ public class AtrativoService {
 
     public AtrativoResponse createAtrativo(AtrativoCreatedRequest request) {
         var newAtrativo = new Atrativo();
-        newAtrativo.setNomeAtrativo(request.getNomeAtrativo());
-        newAtrativo.setEnderecoAtrativo(request.getEnderecoAtrativo());
-        newAtrativo.setDescricaoAtrativo(request.getDescricaoAtrativo());
+        newAtrativo.setNome(request.getNome());
+        newAtrativo.setEndereco(request.getEndereco());
+        newAtrativo.setDescricao(request.getDescricao());
         newAtrativo.setRota(request.getRota());
         newAtrativo.setHorarioFuncionamento(request.getHorarioFuncionamento());
         newAtrativo.setDiasFuncionamento(request.getDiasFuncionamento());
@@ -51,9 +51,9 @@ public class AtrativoService {
 
         return new AtrativoResponse(
                 saveAtrativo.getId(),
-                saveAtrativo.getNomeAtrativo(),
-                saveAtrativo.getEnderecoAtrativo(),
-                saveAtrativo.getDescricaoAtrativo(),
+                saveAtrativo.getNome(),
+                saveAtrativo.getEndereco(),
+                saveAtrativo.getDescricao(),
                 saveAtrativo.getDiasFuncionamento(),
                 saveAtrativo.getHorarioFuncionamento(),
                 saveAtrativo.getRota(),
@@ -70,9 +70,9 @@ public class AtrativoService {
         }
 
         var atrativo = result.get();
-        atrativo.setNomeAtrativo(request.getNomeAtrativo());
-        atrativo.setEnderecoAtrativo(request.getEnderecoAtrativo());
-        atrativo.setDescricaoAtrativo(request.getDescricaoAtrativo());
+        atrativo.setNome(request.getNome());
+        atrativo.setEndereco(request.getEndereco());
+        atrativo.setDescricao(request.getDescricao());
         atrativo.setRota(request.getRota());
         atrativo.setHorarioFuncionamento(request.getHorarioFuncionamento());
         atrativo.setDiasFuncionamento(request.getDiasFuncionamento());
@@ -82,9 +82,9 @@ public class AtrativoService {
         var saveAtrativo = repository.save(atrativo);
         return new AtrativoResponse(
                 saveAtrativo.getId(),
-                saveAtrativo.getNomeAtrativo(),
-                saveAtrativo.getEnderecoAtrativo(),
-                saveAtrativo.getDescricaoAtrativo(),
+                saveAtrativo.getNome(),
+                saveAtrativo.getEndereco(),
+                saveAtrativo.getDescricao(),
                 saveAtrativo.getDiasFuncionamento(),
                 saveAtrativo.getHorarioFuncionamento(),
                 saveAtrativo.getRota(),
@@ -105,9 +105,9 @@ public class AtrativoService {
 
         return new AtrativoResponse(
                 atrativo.getId(),
-                atrativo.getNomeAtrativo(),
-                atrativo.getEnderecoAtrativo(),
-                atrativo.getDescricaoAtrativo(),
+                atrativo.getNome(),
+                atrativo.getEndereco(),
+                atrativo.getDescricao(),
                 atrativo.getDiasFuncionamento(),
                 atrativo.getHorarioFuncionamento(),
                 atrativo.getRota(),

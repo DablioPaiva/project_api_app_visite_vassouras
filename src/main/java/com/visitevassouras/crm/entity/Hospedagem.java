@@ -17,43 +17,43 @@ public class Hospedagem {
     private Long id;
 
     @Column(nullable = false)
-    private String nomeHospedagem;
-    private String imagemHospedagem;
-    private String urlHospedagem;
+    private String nome;
+    private String imagem;
+    private String url;
 
     public Hospedagem() {
         this.id = id;
-        this.nomeHospedagem = nomeHospedagem;
-        this.imagemHospedagem = imagemHospedagem;
-        this.urlHospedagem = urlHospedagem;
+        this.nome = nome;
+        this.imagem = imagem;
+        this.url = url;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getNomeHospedagem() {
-        return nomeHospedagem;
+    public String getNome() {
+        return nome;
     }
 
-    public String getImagemHospedagem() {
-        return imagemHospedagem;
+    public String getImagem() {
+        return imagem;
     }
 
-    public String getUrlHospedagem() {
-        return urlHospedagem;
+    public String getUrl() {
+        return url;
     }
 
-    public void setNomeHospedagem(String nomeHospedagem) {
-        this.nomeHospedagem = nomeHospedagem;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setImagemHospedagem(String imagemHospedagem) {
-        this.imagemHospedagem = imagemHospedagem;
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
-    public void setUrlHospedagem(String urlHospedagem) {
-        this.urlHospedagem = urlHospedagem;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 

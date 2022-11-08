@@ -24,9 +24,9 @@ public class EventoService {
 
         return result.stream().map(evento -> new EventoResponse(
                 evento.getId(),
-                evento.getTituloEvento(),
-                evento.getEnderecoEvento(),
-                evento.getDescricaoEvento(),
+                evento.getTitulo(),
+                evento.getEndereco(),
+                evento.getDescricao(),
                 evento.getDiasInicio(),
                 evento.getDiasTermino(),
                 evento.getLinkIngresso(),
@@ -37,9 +37,9 @@ public class EventoService {
 
     public EventoResponse createEvento(EventoCreatedRequest request) {
         var newEvento = new Evento();
-        newEvento.setTituloEvento(request.getTituloEvento());
-        newEvento.setEnderecoEvento(request.getEnderecoEvento());
-        newEvento.setDescricaoEvento(request.getDescricaoEvento());
+        newEvento.setTitulo(request.getTitulo());
+        newEvento.setEndereco(request.getEndereco());
+        newEvento.setDescricao(request.getDescricao());
         newEvento.setDiasInicio(request.getDiasInicio());
         newEvento.setDiasTermino(request.getDiasTermino());
         newEvento.setValor(request.getValor());
@@ -49,9 +49,9 @@ public class EventoService {
 
         return new EventoResponse(
                 saveEvento.getId(),
-                saveEvento.getTituloEvento(),
-                saveEvento.getEnderecoEvento(),
-                saveEvento.getDescricaoEvento(),
+                saveEvento.getTitulo(),
+                saveEvento.getEndereco(),
+                saveEvento.getDescricao(),
                 saveEvento.getDiasInicio(),
                 saveEvento.getDiasTermino(),
                 saveEvento.getHorarioEvento(),
@@ -68,9 +68,9 @@ public class EventoService {
         }
 
         var evento = result.get();
-        evento.setTituloEvento(request.getTituloEvento());
-        evento.setEnderecoEvento(request.getEnderecoEvento());
-        evento.setDescricaoEvento(request.getDescricaoEvento());
+        evento.setTitulo(request.getTitulo());
+        evento.setEndereco(request.getEndereco());
+        evento.setDescricao(request.getDescricao());
         evento.setValor(request.getValor());
         evento.setDiasInicio(request.getDiasInicio());
         evento.setDiasTermino(request.getDiasTermino());
@@ -80,12 +80,12 @@ public class EventoService {
         var saveEvento = repository.save(evento);
         return new EventoResponse(
                 saveEvento.getId(),
-                saveEvento.getTituloEvento(),
-                saveEvento.getEnderecoEvento(),
-                saveEvento.getDescricaoEvento(),
+                saveEvento.getTitulo(),
+                saveEvento.getEndereco(),
+                saveEvento.getDescricao(),
                 saveEvento.getDiasInicio(),
                 saveEvento.getDiasTermino(),
-                saveEvento.getTituloEvento(),
+                saveEvento.getLinkIngresso(),
                 saveEvento.getValor(),
                 saveEvento.getHorarioEvento()
         );
@@ -103,12 +103,12 @@ public class EventoService {
 
         return new EventoResponse(
                 evento.getId(),
-                evento.getTituloEvento(),
-                evento.getEnderecoEvento(),
-                evento.getDescricaoEvento(),
+                evento.getTitulo(),
+                evento.getEndereco(),
+                evento.getDescricao(),
                 evento.getDiasInicio(),
                 evento.getDiasTermino(),
-                evento.getTituloEvento(),
+                evento.getLinkIngresso(),
                 evento.getValor(),
                 evento.getHorarioEvento()
         );

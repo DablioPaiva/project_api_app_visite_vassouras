@@ -8,12 +8,12 @@ import javax.validation.constraints.NotEmpty;
 public class HospedagemCreatedRequest {
 
     @NotEmpty(message = "Por favor, informe o nome do estabelecimento de hospedagem.")
-    private String nomeHospedagem;
+    private String nome;
 
     @NotEmpty(message = "Por favor, faça upload de uma imagem para a hospedagem.")
-    private String imagemHospedagem;
+    private String imagem;
 
     @NotEmpty(message = "Por favor, informe uma url para estabelecimento de hospedagem.")
-    private String urlHospedagem;
+    private String url;
 
 }

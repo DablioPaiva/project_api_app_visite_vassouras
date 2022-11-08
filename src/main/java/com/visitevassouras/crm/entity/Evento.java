@@ -17,9 +17,9 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String tituloEvento;
-    private String enderecoEvento;
-    private String descricaoEvento;
+    private String titulo;
+    private String endereco;
+    private String descricao;
     private String diasInicio;
     private String diasTermino;
     private String horarioEvento;
@@ -28,9 +28,9 @@ public class Evento {
 
     public Evento() {
         this.id = id;
-        this.tituloEvento = tituloEvento;
-        this.enderecoEvento = enderecoEvento;
-        this.descricaoEvento = descricaoEvento;
+        this.titulo = titulo;
+        this.endereco = endereco;
+        this.descricao = descricao;
         this.diasInicio = diasInicio;
         this.diasTermino = diasTermino;
         this.horarioEvento = horarioEvento;
@@ -42,16 +42,16 @@ public class Evento {
         return id;
     }
 
-    public String getTituloEvento() {
-        return tituloEvento;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getEnderecoEvento() {
-        return enderecoEvento;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public String getDescricaoEvento() {
-        return descricaoEvento;
+    public String getDescricao() {
+        return descricao;
     }
 
     public String getDiasInicio() {
@@ -74,16 +74,16 @@ public class Evento {
         return linkIngresso;
     }
 
-    public void setTituloEvento(String tituloEvento) {
-        this.tituloEvento = tituloEvento;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public void setEnderecoEvento(String enderecoEvento) {
-        this.enderecoEvento = enderecoEvento;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public void setDescricaoEvento(String descricaoEvento) {
-        this.descricaoEvento = descricaoEvento;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public void setDiasInicio(String diasInicio) {

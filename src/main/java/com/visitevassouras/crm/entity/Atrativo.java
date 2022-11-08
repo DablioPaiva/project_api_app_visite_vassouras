@@ -1,14 +1,9 @@
 package com.visitevassouras.crm.entity;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 @Data
-@Getter
-@Setter
 @Entity
 public class Atrativo {
 
@@ -17,9 +12,9 @@ public class Atrativo {
     private Long id;
 
     @Column(nullable = false)
-    private String nomeAtrativo; //private String nome
-    private String enderecoAtrativo;
-    private String descricaoAtrativo;
+    private String nome; //private String nome
+    private String endereco;
+    private String descricao;
     private String diasFuncionamento;
     private String horarioFuncionamento;
     private String rota;
@@ -28,9 +23,9 @@ public class Atrativo {
 
     public Atrativo() {
         this.id = id;
-        this.nomeAtrativo = nomeAtrativo;
-        this.enderecoAtrativo = enderecoAtrativo;
-        this.descricaoAtrativo = descricaoAtrativo;
+        this.nome = nome;
+        this.endereco = endereco;
+        this.descricao = descricao;
         this.diasFuncionamento = diasFuncionamento;
         this.horarioFuncionamento = horarioFuncionamento;
         this.rota = rota;
@@ -42,16 +37,16 @@ public class Atrativo {
         return id;
     }
 
-    public String getNomeAtrativo() {
-        return nomeAtrativo;
+    public String getNome() {
+        return nome;
     }
 
-    public String getEnderecoAtrativo() {
-        return enderecoAtrativo;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public String getDescricaoAtrativo() {
-        return descricaoAtrativo;
+    public String getDescricao() {
+        return descricao;
     }
 
     public String getDiasFuncionamento() {
@@ -74,16 +69,16 @@ public class Atrativo {
         return imgSecundaria;
     }
 
-    public void setNomeAtrativo(String nomeAtrativo) {
-        this.nomeAtrativo = nomeAtrativo;
+    public void setNomeAtrativo(String nome) {
+        this.nome = nome;
     }
 
-    public void setEnderecoAtrativo(String enderecoAtrativo) {
-        this.enderecoAtrativo = enderecoAtrativo;
+    public void setEnderecoAtrativo(String endereco) {
+        this.endereco = endereco;
     }
 
-    public void setDescricaoAtrativo(String descricaoAtrativo) {
-        this.descricaoAtrativo = descricaoAtrativo;
+    public void setDescricaoAtrativo(String descricao) {
+        this.descricao = descricao;
     }
 
     public void setDiasFuncionamento(String diasFuncionamento) {

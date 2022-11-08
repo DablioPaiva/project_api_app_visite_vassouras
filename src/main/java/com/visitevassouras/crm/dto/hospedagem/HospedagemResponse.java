@@ -8,7 +8,7 @@ import lombok.Data;
 
 public class HospedagemResponse {
     private Long id;
-    private String nomeHospedagem;
-    private String imagemHospedagem;
-    private String urlHospedagem;
+    private String nome;
+    private String imagem;
+    private String url;
 }

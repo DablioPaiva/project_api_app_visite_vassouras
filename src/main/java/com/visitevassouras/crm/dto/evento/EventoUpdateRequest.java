@@ -8,13 +8,13 @@ import javax.validation.constraints.NotEmpty;
 public class EventoUpdateRequest {
 
     @NotEmpty(message = "Por favor, informe o título do evento.")
-    private String tituloEvento;
+    private String titulo;
 
     @NotEmpty(message = "Por favor, informe o endereço do evento.")
-    private String enderecoEvento;
+    private String endereco;
 
     @NotEmpty(message = "Por favor, informe uma descrição para o evento.")
-    private String descricaoEvento;
+    private String descricao;
 
     @NotEmpty(message = "Por favor, informe o dia de início do evento.")
     private String diasInicio;

@@ -10,9 +10,9 @@ import java.util.Date;
 public class EventoResponse {
 
     private Long id;
-    private String tituloEvento;
-    private String enderecoEvento;
-    private String descricaoEvento;
+    private String titulo;
+    private String endereco;
+    private String descricao;
     private String diasInicio;
     private String diasTermino;
     private String horarioEvento;

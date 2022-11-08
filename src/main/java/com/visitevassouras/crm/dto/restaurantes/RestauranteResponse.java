@@ -8,8 +8,8 @@ import lombok.Data;
 public class RestauranteResponse {
 
     private Long id;
-    private String nomeRestaurante;
-    private String logoRestaurante;
-    private String urlRestaurante;
+    private String nome;
+    private String logo;
+    private String url;
 
 }

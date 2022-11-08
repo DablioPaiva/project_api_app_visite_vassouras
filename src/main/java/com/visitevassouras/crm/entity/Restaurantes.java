@@ -17,43 +17,43 @@ public class Restaurantes {
     private Long id;
 
     @Column(nullable = false)
-    private String nomeRestaurante;
-    private String logoRestaurante;
-    private String urlRestaurante;
+    private String nome;
+    private String logo;
+    private String url;
 
     public Restaurantes() {
         this.id = id;
-        this.nomeRestaurante = nomeRestaurante;
-        this.logoRestaurante = logoRestaurante;
-        this.urlRestaurante = urlRestaurante;
+        this.nome = nome;
+        this.logo = logo;
+        this.url = url;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getNomeRestaurante() {
-        return nomeRestaurante;
+    public String getNome() {
+        return nome;
     }
 
-    public String getLogoRestaurante() {
-        return logoRestaurante;
+    public String getLogo() {
+        return logo;
     }
 
-    public String getUrlRestaurante() {
-        return urlRestaurante;
+    public String getUrl() {
+        return url;
     }
 
-    public void setNomeRestaurante(String nomeRestaurante) {
-        this.nomeRestaurante = nomeRestaurante;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setLogoRestaurante(String logoRestaurante) {
-        this.logoRestaurante = logoRestaurante;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
-    public void setUrlRestaurante(String urlRestaurante) {
-        this.urlRestaurante = urlRestaurante;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }

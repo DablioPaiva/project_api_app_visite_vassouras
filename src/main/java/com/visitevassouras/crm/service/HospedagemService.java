@@ -24,23 +24,23 @@ public class HospedagemService {
 
         return result.stream().map(hospedagem -> new HospedagemResponse(
                 hospedagem.getId(),
-                hospedagem.getNomeHospedagem(),
-                hospedagem.getUrlHospedagem(),
-                hospedagem.getImagemHospedagem()
+                hospedagem.getNome(),
+                hospedagem.getUrl(),
+                hospedagem.getImagem()
         )).collect(Collectors.toList());
     }
     public HospedagemResponse createHospedagem(HospedagemCreatedRequest request) {
         var newHospedagem = new Hospedagem();
-        newHospedagem.setNomeHospedagem(request.getNomeHospedagem());
-        newHospedagem.setImagemHospedagem(request.getImagemHospedagem());
-        newHospedagem.setUrlHospedagem(request.getUrlHospedagem());
+        newHospedagem.setNome(request.getNome());
+        newHospedagem.setImagem(request.getImagem());
+        newHospedagem.setUrl(request.getUrl());
         var saveHospedagem = repository.save(newHospedagem);
 
         return new HospedagemResponse(
                 saveHospedagem.getId(),
-                saveHospedagem.getNomeHospedagem(),
-                saveHospedagem.getImagemHospedagem(),
-                saveHospedagem.getUrlHospedagem()
+                saveHospedagem.getNome(),
+                saveHospedagem.getImagem(),
+                saveHospedagem.getUrl()
         );
     }
 
@@ -52,17 +52,17 @@ public class HospedagemService {
         }
 
         var hospedagem = result.get();
-        hospedagem.setNomeHospedagem(request.getNomeHospedagem());
-        hospedagem.setUrlHospedagem(request.getUrlHospedagem());
-        hospedagem.setImagemHospedagem(request.getImagemHospedagem());
+        hospedagem.setNome(request.getNome());
+        hospedagem.setUrl(request.getUrl());
+        hospedagem.setImagem(request.getImagem());
 
         var saveHospedagem = repository.save(hospedagem);
 
         return new HospedagemResponse(
                 saveHospedagem.getId(),
-                saveHospedagem.getNomeHospedagem(),
-                saveHospedagem.getImagemHospedagem(),
-                saveHospedagem.getUrlHospedagem()
+                saveHospedagem.getNome(),
+                saveHospedagem.getImagem(),
+                saveHospedagem.getUrl()
         );
     }
 
@@ -78,9 +78,9 @@ public class HospedagemService {
 
         return new HospedagemResponse(
                 hospedagem.getId(),
-                hospedagem.getNomeHospedagem(),
-                hospedagem.getImagemHospedagem(),
-                hospedagem.getUrlHospedagem()
+                hospedagem.getNome(),
+                hospedagem.getImagem(),
+                hospedagem.getUrl()
         );
     }
 
