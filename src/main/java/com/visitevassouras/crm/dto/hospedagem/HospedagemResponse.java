@@ -11,4 +11,5 @@ public class HospedagemResponse {
     private String nome;
     private String imagem;
     private String url;
+    private Boolean ativo;
 }

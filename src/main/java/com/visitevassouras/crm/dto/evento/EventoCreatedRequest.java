@@ -31,4 +31,6 @@ public class EventoCreatedRequest {
     @NotEmpty(message = "Por favor, informe o link para venda de ingresso do evento.")
     private String linkIngresso;
 
+    private Boolean ativo;
+
 }

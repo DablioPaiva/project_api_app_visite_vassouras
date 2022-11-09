@@ -20,6 +20,7 @@ public class Atrativo {
     private String rota;
     private String imgPrincipal;
     private String imgSecundaria; // ver upload de arquivos ao invés de URL
+    private Boolean ativo;
 
     public Atrativo() {
         this.id = id;
@@ -31,6 +32,7 @@ public class Atrativo {
         this.rota = rota;
         this.imgPrincipal = imgPrincipal;
         this.imgSecundaria = imgSecundaria;
+        this.ativo = ativo;
     }
 
     public Long getId() {
@@ -69,15 +71,17 @@ public class Atrativo {
         return imgSecundaria;
     }
 
-    public void setNomeAtrativo(String nome) {
+    public Boolean getAtivo() {return ativo;}
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setEnderecoAtrativo(String endereco) {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public void setDescricaoAtrativo(String descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -100,5 +104,7 @@ public class Atrativo {
     public void setImgSecundaria(String imgSecundaria) {
         this.imgSecundaria = imgSecundaria;
     }
+
+    public void setAtivo(Boolean ativo){this.ativo = ativo;}
 
 }

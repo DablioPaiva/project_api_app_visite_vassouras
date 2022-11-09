@@ -20,12 +20,14 @@ public class Hospedagem {
     private String nome;
     private String imagem;
     private String url;
+    private Boolean ativo;
 
     public Hospedagem() {
         this.id = id;
         this.nome = nome;
         this.imagem = imagem;
         this.url = url;
+        this.ativo = ativo;
     }
 
     public Long getId() {
@@ -44,6 +46,8 @@ public class Hospedagem {
         return url;
     }
 
+    public Boolean getAtivo(){return ativo;}
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -56,5 +60,6 @@ public class Hospedagem {
         this.url = url;
     }
 
+    public void setAtivo(Boolean ativo){this.ativo = ativo;}
 
 }

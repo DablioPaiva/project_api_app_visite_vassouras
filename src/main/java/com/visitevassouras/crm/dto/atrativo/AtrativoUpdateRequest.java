@@ -30,4 +30,6 @@ public class AtrativoUpdateRequest {
 
     @NotEmpty(message = "Por favor, faça upload de uma segunda imagem para o Atrativo.")
     private String imgSecundaria;
+
+    private Boolean ativo;
 }

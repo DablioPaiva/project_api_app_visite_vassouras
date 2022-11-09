@@ -20,12 +20,15 @@ public class Restaurantes {
     private String nome;
     private String logo;
     private String url;
+    private Boolean ativo;
 
     public Restaurantes() {
         this.id = id;
         this.nome = nome;
         this.logo = logo;
         this.url = url;
+        this.ativo = ativo;
+
     }
 
     public Long getId() {
@@ -44,6 +47,8 @@ public class Restaurantes {
         return url;
     }
 
+    public Boolean getAtivo(){return ativo;}
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -55,5 +60,7 @@ public class Restaurantes {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    public void setAtivo(Boolean ativo) {this.ativo = ativo;}
 
 }

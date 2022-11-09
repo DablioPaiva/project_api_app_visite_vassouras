@@ -26,7 +26,8 @@ public class HospedagemService {
                 hospedagem.getId(),
                 hospedagem.getNome(),
                 hospedagem.getUrl(),
-                hospedagem.getImagem()
+                hospedagem.getImagem(),
+                hospedagem.getAtivo()
         )).collect(Collectors.toList());
     }
     public HospedagemResponse createHospedagem(HospedagemCreatedRequest request) {
@@ -40,7 +41,8 @@ public class HospedagemService {
                 saveHospedagem.getId(),
                 saveHospedagem.getNome(),
                 saveHospedagem.getImagem(),
-                saveHospedagem.getUrl()
+                saveHospedagem.getUrl(),
+                saveHospedagem.getAtivo()
         );
     }
 
@@ -62,7 +64,8 @@ public class HospedagemService {
                 saveHospedagem.getId(),
                 saveHospedagem.getNome(),
                 saveHospedagem.getImagem(),
-                saveHospedagem.getUrl()
+                saveHospedagem.getUrl(),
+                saveHospedagem.getAtivo()
         );
     }
 
@@ -80,7 +83,8 @@ public class HospedagemService {
                 hospedagem.getId(),
                 hospedagem.getNome(),
                 hospedagem.getImagem(),
-                hospedagem.getUrl()
+                hospedagem.getUrl(),
+                hospedagem.getAtivo()
         );
     }
 

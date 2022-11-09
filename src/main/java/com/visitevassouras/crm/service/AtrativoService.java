@@ -32,7 +32,8 @@ public class AtrativoService {
                 atrativo.getHorarioFuncionamento(),
                 atrativo.getRota(),
                 atrativo.getImgPrincipal(),
-                atrativo.getImgSecundaria()
+                atrativo.getImgSecundaria(),
+                atrativo.getAtivo()
         )).collect(Collectors.toList());
     }
 
@@ -46,6 +47,7 @@ public class AtrativoService {
         newAtrativo.setDiasFuncionamento(request.getDiasFuncionamento());
         newAtrativo.setImgPrincipal(request.getImgPrincipal());
         newAtrativo.setImgSecundaria(request.getImgSecundaria());
+        newAtrativo.setAtivo(request.getAtivo());
 
         var saveAtrativo = repository.save(newAtrativo);
 
@@ -58,7 +60,8 @@ public class AtrativoService {
                 saveAtrativo.getHorarioFuncionamento(),
                 saveAtrativo.getRota(),
                 saveAtrativo.getImgPrincipal(),
-                saveAtrativo.getImgSecundaria()
+                saveAtrativo.getImgSecundaria(),
+                saveAtrativo.getAtivo()
         );
     }
 
@@ -78,6 +81,7 @@ public class AtrativoService {
         atrativo.setDiasFuncionamento(request.getDiasFuncionamento());
         atrativo.setImgPrincipal(request.getImgPrincipal());
         atrativo.setImgSecundaria(request.getImgSecundaria());
+        atrativo.setAtivo(request.getAtivo());
 
         var saveAtrativo = repository.save(atrativo);
         return new AtrativoResponse(
@@ -89,7 +93,8 @@ public class AtrativoService {
                 saveAtrativo.getHorarioFuncionamento(),
                 saveAtrativo.getRota(),
                 saveAtrativo.getImgPrincipal(),
-                saveAtrativo.getImgSecundaria()
+                saveAtrativo.getImgSecundaria(),
+                saveAtrativo.getAtivo()
         );
     }
 
@@ -112,7 +117,8 @@ public class AtrativoService {
                 atrativo.getHorarioFuncionamento(),
                 atrativo.getRota(),
                 atrativo.getImgPrincipal(),
-                atrativo.getImgSecundaria()
+                atrativo.getImgSecundaria(),
+                atrativo.getAtivo()
         );
     }
 }

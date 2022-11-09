@@ -16,4 +16,6 @@ public class RestauranteUpdateRequest {
     @NotEmpty(message = "Por favor, informe uma url para o restaurante.")
     private String url;
 
+    private Boolean ativo;
+
 }

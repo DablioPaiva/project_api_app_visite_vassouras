@@ -18,5 +18,6 @@ public class EventoResponse {
     private String horarioEvento;
     private Float valor;
     private String linkIngresso;
+    private Boolean ativo;
 
 }

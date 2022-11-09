@@ -26,7 +26,8 @@ public class RestauranteService {
                 restaurante.getId(),
                 restaurante.getNome(),
                 restaurante.getLogo(),
-                restaurante.getUrl()
+                restaurante.getUrl(),
+                restaurante.getAtivo()
         )).collect(Collectors.toList());
     }
     public RestauranteResponse createRestaurante(RestauranteCreatedRequest request) {
@@ -34,6 +35,7 @@ public class RestauranteService {
         newRestaurante.setNome(request.getNome());
         newRestaurante.setLogo(request.getLogo());
         newRestaurante.setUrl(request.getUrl());
+        newRestaurante.setAtivo(request.getAtivo());
 
         var saveRestaurante = repository.save(newRestaurante);
 
@@ -41,7 +43,8 @@ public class RestauranteService {
                 saveRestaurante.getId(),
                 saveRestaurante.getNome(),
                 saveRestaurante.getLogo(),
-                saveRestaurante.getUrl()
+                saveRestaurante.getUrl(),
+                saveRestaurante.getAtivo()
         );
     }
 
@@ -62,7 +65,8 @@ public class RestauranteService {
                 saveRestaurante.getId(),
                 saveRestaurante.getNome(),
                 saveRestaurante.getLogo(),
-                saveRestaurante.getUrl()
+                saveRestaurante.getUrl(),
+                saveRestaurante.getAtivo()
         );
     }
 
@@ -80,7 +84,8 @@ public class RestauranteService {
                 restaurante.getId(),
                 restaurante.getNome(),
                 restaurante.getLogo(),
-                restaurante.getUrl()
+                restaurante.getUrl(),
+                restaurante.getAtivo()
         );
     }
 }

@@ -25,6 +25,7 @@ public class Evento {
     private String horarioEvento;
     private Float valor;
     private String linkIngresso;
+    private Boolean ativo;
 
     public Evento() {
         this.id = id;
@@ -36,6 +37,7 @@ public class Evento {
         this.horarioEvento = horarioEvento;
         this.valor = valor;
         this.linkIngresso = linkIngresso;
+        this.ativo = ativo;
     }
 
     public Long getId() {
@@ -74,6 +76,8 @@ public class Evento {
         return linkIngresso;
     }
 
+    public Boolean getAtivo(){return ativo;}
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -105,6 +109,8 @@ public class Evento {
     public void setLinkIngresso(String linkIngresso) {
         this.linkIngresso = linkIngresso;
     }
+
+    public void setAtivo(Boolean ativo){this.ativo = ativo;}
 
 
 }

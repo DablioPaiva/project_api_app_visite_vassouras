@@ -30,4 +30,6 @@ public class AtrativoCreatedRequest {
 
     private String imgSecundaria;
 
+    private Boolean ativo;
+
 }

@@ -16,5 +16,6 @@ public class AtrativoResponse {
     private String rota;
     private String imgPrincipal;
     private String imgSecundaria;
+    private Boolean ativo;
 
 }

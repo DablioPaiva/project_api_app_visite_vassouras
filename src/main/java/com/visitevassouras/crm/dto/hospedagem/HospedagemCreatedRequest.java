@@ -16,4 +16,6 @@ public class HospedagemCreatedRequest {
     @NotEmpty(message = "Por favor, informe uma url para estabelecimento de hospedagem.")
     private String url;
 
+    private Boolean ativo;
+
 }

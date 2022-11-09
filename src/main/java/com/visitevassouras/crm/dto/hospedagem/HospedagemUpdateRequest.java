@@ -15,4 +15,6 @@ public class HospedagemUpdateRequest {
     @NotEmpty(message = "Por favor, informe a url do estabelecimento de hospedagem")
     private String url;
 
+    private Boolean ativo;
+
 }

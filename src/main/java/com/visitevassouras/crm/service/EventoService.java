@@ -31,7 +31,8 @@ public class EventoService {
                 evento.getDiasTermino(),
                 evento.getLinkIngresso(),
                 evento.getValor(),
-                evento.getHorarioEvento()
+                evento.getHorarioEvento(),
+                evento.getAtivo()
         )).collect(Collectors.toList());
     }
 
@@ -44,6 +45,7 @@ public class EventoService {
         newEvento.setDiasTermino(request.getDiasTermino());
         newEvento.setValor(request.getValor());
         newEvento.setLinkIngresso(request.getLinkIngresso());
+        newEvento.setAtivo(request.getAtivo());
 
         var saveEvento = repository.save(newEvento);
 
@@ -56,7 +58,8 @@ public class EventoService {
                 saveEvento.getDiasTermino(),
                 saveEvento.getHorarioEvento(),
                 saveEvento.getValor(),
-                saveEvento.getLinkIngresso()
+                saveEvento.getLinkIngresso(),
+                saveEvento.getAtivo()
         );
     }
 
@@ -76,6 +79,7 @@ public class EventoService {
         evento.setDiasTermino(request.getDiasTermino());
         evento.setHorarioEvento(request.getHorarioEvento());
         evento.setLinkIngresso(request.getLinkIngresso());
+        evento.setAtivo(request.getAtivo());
 
         var saveEvento = repository.save(evento);
         return new EventoResponse(
@@ -87,7 +91,8 @@ public class EventoService {
                 saveEvento.getDiasTermino(),
                 saveEvento.getLinkIngresso(),
                 saveEvento.getValor(),
-                saveEvento.getHorarioEvento()
+                saveEvento.getHorarioEvento(),
+                saveEvento.getAtivo()
         );
     }
 
@@ -110,7 +115,8 @@ public class EventoService {
                 evento.getDiasTermino(),
                 evento.getLinkIngresso(),
                 evento.getValor(),
-                evento.getHorarioEvento()
+                evento.getHorarioEvento(),
+                evento.getAtivo()
         );
     }
 }

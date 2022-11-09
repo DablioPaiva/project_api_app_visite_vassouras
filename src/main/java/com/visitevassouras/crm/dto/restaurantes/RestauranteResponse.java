@@ -12,4 +12,6 @@ public class RestauranteResponse {
     private String logo;
     private String url;
 
+    private Boolean ativo;
+
 }
