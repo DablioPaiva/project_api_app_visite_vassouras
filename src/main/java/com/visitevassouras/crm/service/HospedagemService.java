@@ -25,8 +25,8 @@ public class HospedagemService {
         return result.stream().map(hospedagem -> new HospedagemResponse(
                 hospedagem.getId(),
                 hospedagem.getNome(),
-                hospedagem.getUrl(),
                 hospedagem.getImagem(),
+                hospedagem.getUrl(),
                 hospedagem.getAtivo()
         )).collect(Collectors.toList());
     }
@@ -35,6 +35,7 @@ public class HospedagemService {
         newHospedagem.setNome(request.getNome());
         newHospedagem.setImagem(request.getImagem());
         newHospedagem.setUrl(request.getUrl());
+        newHospedagem.setAtivo(request.getAtivo());
         var saveHospedagem = repository.save(newHospedagem);
 
         return new HospedagemResponse(
@@ -55,8 +56,9 @@ public class HospedagemService {
 
         var hospedagem = result.get();
         hospedagem.setNome(request.getNome());
-        hospedagem.setUrl(request.getUrl());
         hospedagem.setImagem(request.getImagem());
+        hospedagem.setUrl(request.getUrl());
+        hospedagem.setAtivo(request.getAtivo());
 
         var saveHospedagem = repository.save(hospedagem);
 

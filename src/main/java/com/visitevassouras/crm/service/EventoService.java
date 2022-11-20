@@ -29,9 +29,9 @@ public class EventoService {
                 evento.getDescricao(),
                 evento.getDiasInicio(),
                 evento.getDiasTermino(),
-                evento.getLinkIngresso(),
-                evento.getValor(),
                 evento.getHorarioEvento(),
+                evento.getValor(),
+                evento.getLinkIngresso(),
                 evento.getAtivo()
         )).collect(Collectors.toList());
     }
@@ -74,10 +74,10 @@ public class EventoService {
         evento.setTitulo(request.getTitulo());
         evento.setEndereco(request.getEndereco());
         evento.setDescricao(request.getDescricao());
-        evento.setValor(request.getValor());
         evento.setDiasInicio(request.getDiasInicio());
         evento.setDiasTermino(request.getDiasTermino());
         evento.setHorarioEvento(request.getHorarioEvento());
+        evento.setValor(request.getValor());
         evento.setLinkIngresso(request.getLinkIngresso());
         evento.setAtivo(request.getAtivo());
 
@@ -89,9 +89,9 @@ public class EventoService {
                 saveEvento.getDescricao(),
                 saveEvento.getDiasInicio(),
                 saveEvento.getDiasTermino(),
-                saveEvento.getLinkIngresso(),
-                saveEvento.getValor(),
                 saveEvento.getHorarioEvento(),
+                saveEvento.getValor(),
+                saveEvento.getLinkIngresso(),
                 saveEvento.getAtivo()
         );
     }
