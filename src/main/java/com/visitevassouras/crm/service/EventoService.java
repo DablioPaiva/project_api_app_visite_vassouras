@@ -26,9 +26,8 @@ public class EventoService {
                 evento.getId(),
                 evento.getTitulo(),
                 evento.getEndereco(),
-                evento.getDescricao(),
-                evento.getDiasInicio(),
-                evento.getDiasTermino(),
+                evento.getDataInicio(),
+                evento.getDataTermino(),
                 evento.getHorarioEvento(),
                 evento.getValor(),
                 evento.getLinkIngresso(),
@@ -40,9 +39,8 @@ public class EventoService {
         var newEvento = new Evento();
         newEvento.setTitulo(request.getTitulo());
         newEvento.setEndereco(request.getEndereco());
-        newEvento.setDescricao(request.getDescricao());
-        newEvento.setDiasInicio(request.getDiasInicio());
-        newEvento.setDiasTermino(request.getDiasTermino());
+        newEvento.setDataInicio(request.getDataInicio());
+        newEvento.setDataTermino(request.getDataTermino());
         newEvento.setValor(request.getValor());
         newEvento.setLinkIngresso(request.getLinkIngresso());
         newEvento.setAtivo(request.getAtivo());
@@ -53,9 +51,8 @@ public class EventoService {
                 saveEvento.getId(),
                 saveEvento.getTitulo(),
                 saveEvento.getEndereco(),
-                saveEvento.getDescricao(),
-                saveEvento.getDiasInicio(),
-                saveEvento.getDiasTermino(),
+                saveEvento.getDataInicio(),
+                saveEvento.getDataTermino(),
                 saveEvento.getHorarioEvento(),
                 saveEvento.getValor(),
                 saveEvento.getLinkIngresso(),
@@ -73,9 +70,8 @@ public class EventoService {
         var evento = result.get();
         evento.setTitulo(request.getTitulo());
         evento.setEndereco(request.getEndereco());
-        evento.setDescricao(request.getDescricao());
-        evento.setDiasInicio(request.getDiasInicio());
-        evento.setDiasTermino(request.getDiasTermino());
+        evento.setDataInicio(request.getDataInicio());
+        evento.setDataTermino(request.getDataTermino());
         evento.setHorarioEvento(request.getHorarioEvento());
         evento.setValor(request.getValor());
         evento.setLinkIngresso(request.getLinkIngresso());
@@ -86,9 +82,8 @@ public class EventoService {
                 saveEvento.getId(),
                 saveEvento.getTitulo(),
                 saveEvento.getEndereco(),
-                saveEvento.getDescricao(),
-                saveEvento.getDiasInicio(),
-                saveEvento.getDiasTermino(),
+                saveEvento.getDataInicio(),
+                saveEvento.getDataTermino(),
                 saveEvento.getHorarioEvento(),
                 saveEvento.getValor(),
                 saveEvento.getLinkIngresso(),
@@ -110,9 +105,8 @@ public class EventoService {
                 evento.getId(),
                 evento.getTitulo(),
                 evento.getEndereco(),
-                evento.getDescricao(),
-                evento.getDiasInicio(),
-                evento.getDiasTermino(),
+                evento.getDataInicio(),
+                evento.getDataTermino(),
                 evento.getLinkIngresso(),
                 evento.getValor(),
                 evento.getHorarioEvento(),

@@ -13,14 +13,11 @@ public class EventoUpdateRequest {
     @NotEmpty(message = "Por favor, informe o endereço do evento.")
     private String endereco;
 
-    @NotEmpty(message = "Por favor, informe uma descrição para o evento.")
-    private String descricao;
-
     @NotEmpty(message = "Por favor, informe o dia de início do evento.")
-    private String diasInicio;
+    private String dataInicio;
 
     @NotEmpty(message = "Por favor, informe o dia do término do evento.")
-    private String diasTermino;
+    private String dataTermino;
 
     @NotEmpty(message = "Por favor, informe o horário do evento.")
     private String horarioEvento;

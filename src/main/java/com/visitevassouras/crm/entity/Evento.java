@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @Getter
@@ -19,9 +18,8 @@ public class Evento {
     @Column(nullable = false)
     private String titulo;
     private String endereco;
-    private String descricao;
-    private String diasInicio;
-    private String diasTermino;
+    private String dataInicio;
+    private String dataTermino;
     private String horarioEvento;
     private Float valor;
     private String linkIngresso;
@@ -31,9 +29,8 @@ public class Evento {
         this.id = id;
         this.titulo = titulo;
         this.endereco = endereco;
-        this.descricao = descricao;
-        this.diasInicio = diasInicio;
-        this.diasTermino = diasTermino;
+        this.dataInicio = dataInicio;
+        this.dataTermino = dataTermino;
         this.horarioEvento = horarioEvento;
         this.valor = valor;
         this.linkIngresso = linkIngresso;
@@ -52,16 +49,12 @@ public class Evento {
         return endereco;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDataInicio() {
+        return dataInicio;
     }
 
-    public String getDiasInicio() {
-        return diasInicio;
-    }
-
-    public String getDiasTermino() {
-        return diasTermino;
+    public String getDataTermino() {
+        return dataTermino;
     }
 
     public String getHorarioEvento() {
@@ -86,16 +79,12 @@ public class Evento {
         this.endereco = endereco;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDataInicio(String diasInicio) {
+        this.dataInicio = diasInicio;
     }
 
-    public void setDiasInicio(String diasInicio) {
-        this.diasInicio = diasInicio;
-    }
-
-    public void setDiasTermino(String diasTermino) {
-        this.diasTermino = diasTermino;
+    public void setDataTermino(String diasTermino) {
+        this.dataTermino = diasTermino;
     }
 
     public void setHorarioEvento(String horarioEvento) {
