@@ -21,7 +21,7 @@ public class Evento {
     private String dataInicio;
     private String dataTermino;
     private String horarioEvento;
-    private Float valor;
+    private String valor;
     private String linkIngresso;
     private Boolean ativo;
 
@@ -61,7 +61,7 @@ public class Evento {
         return horarioEvento;
     }
 
-    public Float getValor() {
+    public String getValor() {
         return valor;
     }
 
@@ -91,7 +91,7 @@ public class Evento {
         this.horarioEvento = horarioEvento;
     }
 
-    public void setValor(Float valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 

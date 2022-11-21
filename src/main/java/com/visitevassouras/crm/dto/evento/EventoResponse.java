@@ -13,7 +13,7 @@ public class EventoResponse {
     private String dataInicio;
     private String dataTermino;
     private String horarioEvento;
-    private Float valor;
+    private String valor;
     private String linkIngresso;
     private Boolean ativo;
 

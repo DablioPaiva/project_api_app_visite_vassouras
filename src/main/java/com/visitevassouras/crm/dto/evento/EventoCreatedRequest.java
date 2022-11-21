@@ -23,7 +23,7 @@ public class EventoCreatedRequest {
     private String horarioEvento;
 
     @NotEmpty(message = "Por favor, informe o valor unitário do evento.")
-    private Float valor;
+    private String valor;
 
     @NotEmpty(message = "Por favor, informe o link para venda de ingresso do evento.")
     private String linkIngresso;
