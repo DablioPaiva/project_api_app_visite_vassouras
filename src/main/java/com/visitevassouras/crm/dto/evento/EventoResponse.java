@@ -9,10 +9,10 @@ public class EventoResponse {
 
     private Long id;
     private String titulo;
-    private String endereco;
+    private String local;
     private String dataInicio;
     private String dataTermino;
-    private String horarioEvento;
+    private String horario;
     private String valor;
     private String linkIngresso;
     private Boolean ativo;

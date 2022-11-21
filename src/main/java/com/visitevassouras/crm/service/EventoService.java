@@ -25,10 +25,10 @@ public class EventoService {
         return result.stream().map(evento -> new EventoResponse(
                 evento.getId(),
                 evento.getTitulo(),
-                evento.getEndereco(),
+                evento.getLocal(),
                 evento.getDataInicio(),
                 evento.getDataTermino(),
-                evento.getHorarioEvento(),
+                evento.getHorario(),
                 evento.getValor(),
                 evento.getLinkIngresso(),
                 evento.getAtivo()
@@ -38,7 +38,7 @@ public class EventoService {
     public EventoResponse createEvento(EventoCreatedRequest request) {
         var newEvento = new Evento();
         newEvento.setTitulo(request.getTitulo());
-        newEvento.setEndereco(request.getEndereco());
+        newEvento.setLocal(request.getLocal());
         newEvento.setDataInicio(request.getDataInicio());
         newEvento.setDataTermino(request.getDataTermino());
         newEvento.setValor(request.getValor());
@@ -50,10 +50,10 @@ public class EventoService {
         return new EventoResponse(
                 saveEvento.getId(),
                 saveEvento.getTitulo(),
-                saveEvento.getEndereco(),
+                saveEvento.getLocal(),
                 saveEvento.getDataInicio(),
                 saveEvento.getDataTermino(),
-                saveEvento.getHorarioEvento(),
+                saveEvento.getHorario(),
                 saveEvento.getValor(),
                 saveEvento.getLinkIngresso(),
                 saveEvento.getAtivo()
@@ -69,10 +69,10 @@ public class EventoService {
 
         var evento = result.get();
         evento.setTitulo(request.getTitulo());
-        evento.setEndereco(request.getEndereco());
+        evento.setLocal(request.getLocal());
         evento.setDataInicio(request.getDataInicio());
         evento.setDataTermino(request.getDataTermino());
-        evento.setHorarioEvento(request.getHorarioEvento());
+        evento.setHorario(request.getHorario());
         evento.setValor(request.getValor());
         evento.setLinkIngresso(request.getLinkIngresso());
         evento.setAtivo(request.getAtivo());
@@ -81,10 +81,10 @@ public class EventoService {
         return new EventoResponse(
                 saveEvento.getId(),
                 saveEvento.getTitulo(),
-                saveEvento.getEndereco(),
+                saveEvento.getLocal(),
                 saveEvento.getDataInicio(),
                 saveEvento.getDataTermino(),
-                saveEvento.getHorarioEvento(),
+                saveEvento.getHorario(),
                 saveEvento.getValor(),
                 saveEvento.getLinkIngresso(),
                 saveEvento.getAtivo()
@@ -104,12 +104,12 @@ public class EventoService {
         return new EventoResponse(
                 evento.getId(),
                 evento.getTitulo(),
-                evento.getEndereco(),
+                evento.getLocal(),
                 evento.getDataInicio(),
                 evento.getDataTermino(),
                 evento.getLinkIngresso(),
                 evento.getValor(),
-                evento.getHorarioEvento(),
+                evento.getHorario(),
                 evento.getAtivo()
         );
     }

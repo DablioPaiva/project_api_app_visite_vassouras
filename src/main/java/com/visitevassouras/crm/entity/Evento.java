@@ -17,10 +17,10 @@ public class Evento {
     private Long id;
     @Column(nullable = false)
     private String titulo;
-    private String endereco;
+    private String local;
     private String dataInicio;
     private String dataTermino;
-    private String horarioEvento;
+    private String horario;
     private String valor;
     private String linkIngresso;
     private Boolean ativo;
@@ -28,10 +28,10 @@ public class Evento {
     public Evento() {
         this.id = id;
         this.titulo = titulo;
-        this.endereco = endereco;
+        this.local = local;
         this.dataInicio = dataInicio;
         this.dataTermino = dataTermino;
-        this.horarioEvento = horarioEvento;
+        this.horario = horario;
         this.valor = valor;
         this.linkIngresso = linkIngresso;
         this.ativo = ativo;
@@ -45,8 +45,8 @@ public class Evento {
         return titulo;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getLocal() {
+        return local;
     }
 
     public String getDataInicio() {
@@ -57,8 +57,8 @@ public class Evento {
         return dataTermino;
     }
 
-    public String getHorarioEvento() {
-        return horarioEvento;
+    public String getHorario() {
+        return horario;
     }
 
     public String getValor() {
@@ -75,8 +75,8 @@ public class Evento {
         this.titulo = titulo;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setLocal(String endereco) {
+        this.local = endereco;
     }
 
     public void setDataInicio(String diasInicio) {
@@ -87,8 +87,8 @@ public class Evento {
         this.dataTermino = diasTermino;
     }
 
-    public void setHorarioEvento(String horarioEvento) {
-        this.horarioEvento = horarioEvento;
+    public void setHorario(String horarioEvento) {
+        this.horario = horarioEvento;
     }
 
     public void setValor(String valor) {

@@ -11,7 +11,7 @@ public class EventoUpdateRequest {
     private String titulo;
 
     @NotEmpty(message = "Por favor, informe o endereço do evento.")
-    private String endereco;
+    private String local;
 
     @NotEmpty(message = "Por favor, informe o dia de início do evento.")
     private String dataInicio;
@@ -20,7 +20,7 @@ public class EventoUpdateRequest {
     private String dataTermino;
 
     @NotEmpty(message = "Por favor, informe o horário do evento.")
-    private String horarioEvento;
+    private String horario;
 
     @NotEmpty(message = "Por favor, informe o valor unitário do evento.")
     private String valor;
